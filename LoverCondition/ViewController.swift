@@ -150,7 +150,7 @@ class ViewController: UIViewController {
                 
                 if starSignTextField.text! == "天秤座" , index == 1, age > 20, age < 30 , eyeIndex == 0, hairIndex == 0, tall > 160  , tall < 170 , sportIndex == 0{
                     resultText.text = "妳是我的真命天女，\(interesstTextField.text!)我也超有興趣，\(skillTextField.text!)也太酷!等不及聽妳分享了!"
-                }else if age > 50 , tall < 150 {
+                }else if age > 50 || tall < 150 {
                     resultText.text = "妳已超出我的守備範圍"
                 }
             }else if starSignTextField.text! == "天蠍座"{
@@ -163,17 +163,18 @@ class ViewController: UIViewController {
                 resultText.text = "請務必填寫完整"
                 print("請務必填寫完整")
             }
-        
-            
         }
-        
-        
-        
-        
-        view.endEditing(true)
+    
+//        view.endEditing(true)
     }
    
     @IBAction func textFieldDismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
+    @IBAction func textFIeldEnd(_ sender: Any) {
+        view.endEditing(true)
+    }
+    @IBAction func textFieldEnd2(_ sender: Any) {
         view.endEditing(true)
     }
     
